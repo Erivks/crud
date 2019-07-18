@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+header {
+    height: 100px;
+    background-color: #262626;
+}
+ul {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    float: right;
+}
+li {
+    display: inline;
+}
+a {
+    text-decoration: none;
+}
+.menu-link {
+    color: #44b874;
+    padding: 4.6% 10% 10.4% 10%;
+}
+.menu-link:hover {
+    color: #262626;
+    background-color: #54e691;
+}
+footer {
+    height: 50px;
+    background-color: #44b874;
+    text-align: center;
+}
+#rodape{
+    line-height: 70%;
+}
+.container {
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px 5px;
+}
+.novoCurso {
+    display: block;
+    margin: 15px 0;
+}
+form label {
+    font-size: 13pt;
+}
+input[type='submit']{
+    width: 15%;
+    height: 4%;
+    background-color: none;
+}
+.inputNovo {
+    width: 20%;
+    height: 3%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #262626;  
+}
+.inputNovo:focus {
+    border-color: #44b874;
+}
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+td {
+    text-align: center;
+}
