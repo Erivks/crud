@@ -21,6 +21,7 @@ switch ($page) {
         break;
     case 'novoAluno':
         include 'views/novoAluno.php';
+        break;
     case 'alunos':
         include 'views/alunos.php';
         break;

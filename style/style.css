@@ -54,7 +54,6 @@ form label {
 input[type='submit']{
     width: 15%;
     height: 4%;
-    background-color: none;
 }
 .inputNovo {
     width: 20%;
@@ -67,9 +66,12 @@ input[type='submit']{
 .inputNovo:focus {
     border-color: #44b874;
 }
-table {
-    width: 100%;
+table, th, td {
     border: 1px solid #ccc;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 td {
     text-align: center;

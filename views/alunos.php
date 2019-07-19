@@ -1,3 +1,6 @@
+<a href="?page=novoAluno">
+    Inserir novo aluno
+</a>
 <table>
     <tr>
         <th>
