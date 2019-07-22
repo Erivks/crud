@@ -76,3 +76,7 @@ table {
 td {
     text-align: center;
 }
+option {
+    width: 15%;
+    margin: 10px 5px;
+}
