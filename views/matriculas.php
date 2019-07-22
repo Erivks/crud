@@ -17,7 +17,7 @@
         while($row = mysqli_fetch_array($queryAlunosCursosResult)){
             echo '<tr><td>'.$row['nome_aluno'].'</td>';
             echo '<td>'.$row['nome_curso'].'</td>';
-            echo '<td><a href="deletaCurso.php?id_curso='
+            echo '<td><a href="../deletaMatricula.php?id_matricula='
                     .$row['id_aluno_curso'].'">Deletar</a></td><tr>';
         }
     ?>
