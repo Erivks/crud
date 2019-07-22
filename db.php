@@ -10,7 +10,7 @@ $connection = mysqli_connect($server, $user, $password, $database);
 $queryCurso = 'SELECT * FROM Cursos'; 
 $queryCursosResult = mysqli_query($connection, $queryCurso);
 
-$queryAlunos = "SELECT nome, DATE_FORMAT(data_nascimento, '%d/%m/%Y') AS 'data_nascimento' FROM Alunos";
+$queryAlunos = "SELECT id_aluno, nome, DATE_FORMAT(data_nascimento, '%d/%m/%Y') AS 'data_nascimento' FROM Alunos";
 $queryAlunosResult = mysqli_query($connection, $queryAlunos);
 
 $queryAlunosCursos = 'SELECT a.nome AS "nome_aluno", c.nome AS "nome_curso" FROM Alunos_Cursos AS ac

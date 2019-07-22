@@ -16,6 +16,9 @@ switch ($page) {
     case 'matriculas':
         include 'views/matriculas.php';
         break;
+    case 'novaMatricula':
+        include 'views/novaMatricula.php';
+        break;
     case 'novoCurso':
         include 'views/novoCurso.php';
         break;
