@@ -1,4 +1,4 @@
-<?php if(isset($_GET['editar'])){ ?>
+<?php if(!isset($_GET['editar'])){ ?>
 
     <h1>Inserir novo curso</h1>
     <form action="../processaAluno.php" method="POST" id="formNovoAluno">
@@ -17,7 +17,7 @@
         <?php if($row['id_aluno'] == $_GET['editar']){ ?>         
             <h1>Editar curso</h1>
             <form action="../editaAluno.php" method="POST" id="formNovoAluno">
-                <input type="hidden" name="id_curso" value="<?php echo $row['id_curso']; ?>">
+                <input type="hidden" name="id_aluno" value="<?php echo $row['id_aluno']; ?>">
 
                 <label for="nomeAluno" class="novoAluno">Nome do aluno:</label>
                 <input type="text" value="<?php echo $row['nome']; ?>" name="nomeAluno" id="nomeAluno" class="novoCurso inputNovo">
