@@ -15,8 +15,10 @@
     </tr>
     <?php
         while($row = mysqli_fetch_array($queryCursosResult)){
-            echo '<tr><td>'.$row['nome'].'</td>';
-            echo '<td>'.$row['carga_horária'].'</td>';
+            echo '<tr><td>'. $row['nome']. '</td>';
+            echo '<td>'. $row['carga_horária']. '</td>';
+            echo '<td><a href="?page=novoCurso&editar='
+                  . $row['id_curso']. '">Editar</a></td>';
             echo '<td><a href="../deletaCurso.php?id_curso='
                   . $row['id_curso'] . '">Deletar</a></td></tr>';
         }
