@@ -10,6 +10,9 @@
             Carga Horária
         </th>
         <th>
+            Editar
+        </th>
+        <th>
             Deletar
         </th>
     </tr>
