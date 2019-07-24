@@ -24,15 +24,43 @@
     </form>
 
 <?php } else { ?>
-    <?php $editarId = $_GET['editar']; ?>
+    <?php $editar = $_GET['editar']; ?>
+    <?php 
+        while($row = mysqli_fetch_array($queryAlunosCursosResult)){
+            if($row['id_aluno_curso'] == $editar){
+                $alunoCurso = $row;
+            }
+        }
+    ?>
+    <h2>Editar matricula</h2>
         <form action="../editaMatricula.php" method="POST">
+            <select name="selectMatricula" id="selectMatricula">
+                <option value="<?php echo $editar ?>" disable="disable" selected>
+                    <?php echo $editar ?>
+                </option>
+            </select>
             <select name="selectAluno" id="selectAluno">
-                <?php 
-                    while($row = mysqli_fetch_array($queryAlunosCursosResult)){
-                        if($row['id_alunos_cursos'] != $editarId){
-                            echo '<option value="'.$row['id_aluno'].'">';
+                <?php
+                    while($row = mysqli_fetch_array($queryAlunosResult)){
+                        if($row['nome'] == $alunoCurso['nome_aluno']){
+                            echo '<option value="'.$row['id_aluno'].'" selected>'.$row['nome'].'</option>';
+                        } else {
+                            echo '<option value="'.$row['id_aluno'].'">'.$row['nome'].'</option>';
                         }
                     }
                 ?>
             </select>
+            <select name="selectCurso" id="selectCurso">
+                <?php
+                    while($row = mysqli_fetch_array($queryCursosResult)){
+                        if($row['nome'] == $alunoCurso['nome_curso']){
+                            echo '<option value="'.$row['id_curso'].'" selected>'.$row['nome'].'</option>';
+                        } else {
+                            echo '<option value="'.$row['id_curso'].'">'.$row['nome'].'</option>';
+                        }
+                    }
+                ?>
+            </select>
+            <input type="submit" value="Editar matricula">
         </form>
+<?php } ?>
