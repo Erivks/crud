@@ -1,4 +1,4 @@
-<a href="?page=novoCurso">
+<a href="?page=novoCurso" role="button" class="btn btn-success botaoInserir">
     Inserir novo curso.
 </a>
 <table class="table">

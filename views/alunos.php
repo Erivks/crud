@@ -1,4 +1,4 @@
-<a href="?page=novoAluno">
+<a href="?page=novoAluno" role="button" class="btn btn-success botaoInserir">
     Inserir novo aluno.
 </a>
 <table class="table">
@@ -24,7 +24,7 @@
     <tbody>
         <?php
             while($row = mysqli_fetch_array($queryAlunosResult)){
-                echo '<tr><th class="text-center">'.$row['id_aluno'].'</th>'
+                echo '<tr><th class="text-center">'.$row['id_aluno'].'</th>';
                 echo '<td>'.$row['nome'].'</td>';
                 echo '<td>'.$row['data_nascimento'].'</td>';
                 echo '<td><a href="?page=novoAluno&editar='

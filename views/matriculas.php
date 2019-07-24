@@ -1,4 +1,4 @@
-<a href="?page=novaMatricula">
+<a href="?page=novaMatricula" role="button" class="btn btn-success botaoInserir">
     Inserir nova matrícula.
 </a>
 <table class="table">

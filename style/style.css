@@ -80,3 +80,6 @@ option {
     width: 15%;
     margin: 10px 5px;
 }
+.botaoInserir {
+    background-color: #44b874;
+}
