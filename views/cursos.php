@@ -24,13 +24,27 @@
     <tbody>
         <?php
             while($row = mysqli_fetch_array($queryCursosResult)){
-                echo '<tr><th class="text-center">'.$row['id_curso'].'</th>';
-                echo '<td>'. $row['nome']. '</td>';
-                echo '<td>'. $row['carga_horária']. '</td>';
-                echo '<td><a href="?page=novoCurso&editar='
-                    . $row['id_curso']. '">Editar</a></td>';
-                echo '<td><a href="../deletaCurso.php?id_curso='
-                    . $row['id_curso'] . '">Deletar</a></td></tr>';
+                echo '<tr>
+                        <th class="text-center">'
+                            .$row['id_curso'].
+                        '</th>';
+                echo    '<td>'
+                            .$row['nome']. 
+                        '</td>';
+                echo    '<td>'
+                            .$row['carga_horária']. 
+                        '</td>';
+                echo    '<td>
+                            <a href="?page=novoCurso&editar='.$row['id_curso'].'">
+                                Editar
+                            </a>
+                        </td>';
+                echo    '<td>
+                            <a href="../deletaCurso.php?id_curso='.$row['id_curso'].'">
+                                Deletar
+                            </a>
+                        </td>
+                    </tr>';
             }
         ?>
     </tbody>
